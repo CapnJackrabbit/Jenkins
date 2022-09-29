@@ -22,7 +22,7 @@ pipeline
         {
             steps
             {
-                sh 'pip install -r reqirements.txt --disable-pip-version-check'
+                sh 'pip install -r requirements.txt --disable-pip-version-check'
             }
         }
     }
