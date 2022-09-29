@@ -22,7 +22,7 @@ pipeline
         {
             steps
             {
-                sh 'pip install -r reqirements.txt --no-cache-dir --disable-pip-version-check'
+                sh 'pip install -r reqirements.txt --disable-pip-version-check'
             }
         }
     }
