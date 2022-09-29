@@ -38,15 +38,13 @@ pipeline
             {
                 always
                 {
-                    recordIssues
-                    (
+                    recordIssues(
                         tool: pylint(pattern: '**/pylint.log'),
                         unstableTotalAll: 50,
                         failedTotalAll: 100
                     )
 
-                    recordIssues
-                    (
+                    recordIssues(
                         tool: pylint(pattern: '**/pep8.log'),
                         unstableTotalAll: 50,
                         failedTotalAll: 100
