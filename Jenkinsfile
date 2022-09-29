@@ -41,13 +41,13 @@ pipeline
                     recordIssues(
                         tool: pyLint(pattern: '**/pylint.log'),
                         unstableTotalAll: 50,
-                        failedTotalAll: 300
+                        failedTotalAll: 200
                     )
 
                     recordIssues(
                         tool: pylint(pattern: '**/pep8.log'),
                         unstableTotalAll: 50,
-                        failedTotalAll: 300
+                        failedTotalAll: 200
                     )
                 }
             }
