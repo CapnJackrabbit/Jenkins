@@ -39,7 +39,7 @@ pipeline
                 always
                 {
                     recordIssues(
-                        tool: pylint(pattern: '**/pylint.log'),
+                        tool: pyLint(pattern: '**/pylint.log'),
                         unstableTotalAll: 50,
                         failedTotalAll: 100
                     )
