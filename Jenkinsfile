@@ -34,6 +34,25 @@ pipeline
                 sh 'find . -name \\*.py | xargs pylint -f parseable | tee pylint.log'
                 sh 'find . -name \\*.py | xargs pycodestyle | tee pep8.log'
             }
+            post
+            {
+                always
+                {
+                    recordIssues
+                    {
+                        tool: pylint(pattern: '**/pylint.log')
+                        unstableTotalAll: 50
+                        failedTotalAll: 100
+                    }
+
+                    recordIssues
+                    {
+                        tool: pylint(pattern: '**/pep8.log')
+                        unstableTotalAll: 50
+                        failedTotalAll: 100
+                    }
+                }
+            }
         }
     }
 }
