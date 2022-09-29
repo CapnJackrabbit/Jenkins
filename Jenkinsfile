@@ -5,6 +5,7 @@ pipeline
         docker
         {
             image 'python:3.7'
+            args '-u root:root'
         }
     }
 
