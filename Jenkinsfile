@@ -22,7 +22,7 @@ pipeline
         {
             steps
             {
-                sh 'sudo pip install -r reqirements.txt --disable-pip-version-check'
+                sh 'pip install -r reqirements.txt --disable-pip-version-check'
             }
         }
     }
